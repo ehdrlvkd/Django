@@ -6,13 +6,11 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <div>
-        <div>hiddd</div>
-    </div>
-    <br>
-    
-    <div>
-        <div>hi</div>
-    </div>
+    <form action="{% url 'search_map' %}" method="post">
+        {% csrf_token %}
+        <label for="search-place"></label>
+        <input type="text" name="search-place">
+        <input type="submit">
+    </form>
 </body>
 </html>
