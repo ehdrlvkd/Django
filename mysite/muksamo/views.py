@@ -16,3 +16,6 @@ def search_map(request):
 
     return render(request,'search_map.html',context)
 # Create your views here.
+
+
+#3373af60e0702b00d075178d19793b57 kakao js key
