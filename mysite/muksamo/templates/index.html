@@ -6,12 +6,16 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <form action="{% url 'search_map' %}" method="post">
-        {% csrf_token %}
-        <label for="search-place"></label>
-        <input type="text" name="search-place">
-        <input type="submit">
-    </form>
+    <div id ="search-tap-wrapper">
+        <form action="{% url 'search_map' %}" method="post" id ="search-tap">
+            {% csrf_token %}
+            <label for="search-place"></label>
+            <input type="text" name="search-place" required>
+            <input type="submit" required>
+        </form>
+    </div>
+
+<script type="text/javascript" src="/static/js/index.js"></script>
 </body>
 
 </html>

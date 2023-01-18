@@ -1,6 +1,4 @@
-
-
-var data = document.getElementById('keyword').value
+var data = document.getElementById('keyword').value;
 // 마커를 담을 배열입니다
 var markers = [];
 
@@ -106,13 +104,11 @@ function displayPlaces(places) {
                 infowindow.close();
             };
             itemEl.onclick = function() {
-                // console.log(place.address_name)
                 OpenModal(place);
                 //리스트 클릭 시, 동작 구현
             };
             kakao.maps.event.addListener(marker, 'click', function() {
-                OpenModal(place)
-                console.log(place.address_name)  
+                OpenModal(place);
                 //마커 클릭 시, 동작 구현
             });
         })(marker, places[i].place_name, places[i]);
@@ -130,8 +126,11 @@ function displayPlaces(places) {
 
 function OpenModal(place){
     document.querySelector('.modal-bung').style.display = 'flex';
-    var place_name = document.querySelector('.bung-rest');
-    place_name.textContent = place.place_name;
+    var bung_name = document.getElementById('bung_name');
+    var bung_content = document.getElementById('bung_content');
+    bung_name.value = place.place_name;
+    bung_content.value = place.address_name;
+    
 }
 
 // 검색결과 항목을 Element로 반환하는 함수입니다

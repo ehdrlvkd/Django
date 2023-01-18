@@ -5,9 +5,12 @@ from django.db import models
 
 
 class Question(models.Model):
-    subject = models.CharField(max_length=200)
-    content = models.TextField()
+    Bung_Name = models.CharField(max_length=200)
+    content = models.CharField(max_length=200)
     create_date = models.DateTimeField()
+
+    def __str__(self):
+        return self.Bung_Name
 
 
 # Create your models here.

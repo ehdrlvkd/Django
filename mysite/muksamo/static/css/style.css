@@ -1,0 +1,8 @@
+#search-tap-wrapper {
+    display:block;border: 1px solid red; width: 30px; height: 30px;
+
+}
+
+#search-tap {
+    display:flex;border: 1px solid red;
+}
